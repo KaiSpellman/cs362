@@ -1,2 +1,13 @@
+var figlet = require("figlet");
+
 const input = process.argv.slice(2);
-console.log(input);
+
+figlet(input, function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
+
